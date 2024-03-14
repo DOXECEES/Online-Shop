@@ -1,0 +1,12 @@
+.tab {
+    display: flex;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    width: 100%;
+}
+
+.tab button {
+    width: 100%;
+
+}

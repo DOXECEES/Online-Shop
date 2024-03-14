@@ -1,14 +1,14 @@
 
 import { Route, Routes, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { SignupForm, createPostAction } from './components/Registration';
-import Layout from './components/Layout';
+import Main from './pages/Main';
 
 const router = createBrowserRouter(
     createRoutesFromElements(
 
         <Route path="/" >
-            <Route path="/" element={<Layout />}>
-            
+            <Route path="/" element={<Main />}>
+
             </Route>
 
             <Route path="about" element={<SignupForm />}>
