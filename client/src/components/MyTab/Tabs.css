@@ -1,14 +1,12 @@
 .tabs {
     display: flex;
-    margin: 10px;
     border-bottom: 1px solid #ccc;
+    height: 100%;
 }
 
 .tab {
     display: flex;
-    padding-top: 10px;
     cursor: pointer;
-    border: none;
     background: none;
 }
 

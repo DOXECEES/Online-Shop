@@ -22,7 +22,9 @@ body {
     padding: 15px;
 }
 
-.layoutheader button {}
+.layoutheader button {
+    background-color: #f5f5f5;
+}
 
 .layoutheader a {
     max-width: 10%;
@@ -34,5 +36,6 @@ body {
 
 .elements-container {
     background-color: #ffffff;
+    height: 75px;
     padding: 10px;
 }

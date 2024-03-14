@@ -14,7 +14,6 @@ export default function Main() {
     const [isAuth, setAuth] = useState(false);
 
 
-    useEffect()
 
     return (
         <>
@@ -36,7 +35,10 @@ export default function Main() {
             <main className="container">
                 <div className="elements-container">
                     <Tabs>
-                        <Tab title="All Goods" to={`/goods`} />
+                        <Tab title="All Goods" to={`/goods`} press={e => {
+                            e.preventDefault();
+                            console.log("dsa");
+                        }} />
                         <Tab title="Electronics" to={`/goods/electronics`} />
                         <Tab title="Clothing" to={`/goods/clothing`} />
                         <Tab title="Books" to={`/goods/books`} />

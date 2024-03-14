@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import './Tab.css'
 
-const Tab = ({ title, children }) => {
+const Tab = ({ title, children, press }) => {
     return (
         <div className='tab'>
-            <button>
+            <button onClick={press}>
                 {title}
             </button>
         </div>
