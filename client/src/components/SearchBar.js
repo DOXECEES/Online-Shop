@@ -1,42 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-import "./SearchBar.css"
+import './SearchBar.css';
+import { Context } from '..';
 
-const SearchBar = ({ onSearch }) => {
-    const [searchTerm, setSearchTerm] = useState("");
+function SearchBar() {
+    const [query, setQuery] = useState('');
+    const [results, setResults] = useState([]);
+    const { user, goods } = useContext(Context)
 
-    const handleInputChange = (e) => {
-        setSearchTerm(e.target.value);
-    };
+    const cheak = () => {
+        {
 
-    const handleSearch = (e) => {
-        e.preventDefault();
-        onSearch(searchTerm);
-    };
-
-    useEffect(() => {
-        axios
-            .get("http://localhost:5000/express_backend")
-            .then((response) => {
-                setSearchTerm(response.data.express);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }, []);
+        }
+    }
 
     return (
-        <form className="SearchBar" onSubmit={handleSearch}>
+        <div className="search-bar-container">
             <input
                 type="text"
-                placeholder="Search..."
-                value={searchTerm}
-                onChange={handleInputChange}
+                placeholder="Search for products..."
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                onClick={cheak}
+                className="search-input"
             />
-            {/* <label>{searchTerm}</label> */}
-            <button type="submit" hidden="true">ds</button>
-        </form>
+        </div>
     );
-};
+}
 
 export default SearchBar;

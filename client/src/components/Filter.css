@@ -1,0 +1,28 @@
+.productDetail {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 180px;
+}
+
+.productDetail label {
+    min-width: 100%;
+}
+
+.productDetail input {
+    min-width: 100%;
+}
+
+.productDetail button {
+    min-width: 100%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ddd;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

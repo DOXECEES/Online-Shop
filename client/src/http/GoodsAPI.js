@@ -1,18 +1,35 @@
 import axios from "axios";
+import { API_URL } from "../util/const";
 
 
-function GetCategories() {
-    return axios.get("api/categories");
+export const GetCategories = async () => {
+    const data = axios.get("http://localhost:5000/" + "api/categories");
+    return data;
 }
 
-function GetTypes() {
-    return axios.get("api/types");
+
+export const GetTypes = async (id) => {
+    const data = axios.get("http://localhost:5000/" + "api/types" + "?id=" + id);
+    return data;
 }
 
-function GetBrands() {
-    return axios.get("api/brands");
+export const GetBrands = async (id) => {
+    const data = axios.get("http://localhost:5000/" + "api/brands" + "?id=" + id);
+    return data;
 }
 
 function GetDevices() {
     return axios.get("api/devices");
+}
+
+export const GetBasket = async () => {
+    const data = axios.get("http://localhost:5000/" + "api/basket" + "?email=" + localStorage.getItem('email'))
+    return data;
+}
+
+export const getRole = async (email) => {
+    const data = axios.post("http://localhost:5000/api" + "/role", {
+        email
+    });
+    return data;
 }

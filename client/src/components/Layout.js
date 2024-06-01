@@ -13,7 +13,6 @@ export default function Layout() {
 
     const [isAuth, setAuth] = useState(false);
 
-
     return (
         <>
             <header className="layoutheader">
@@ -21,7 +20,6 @@ export default function Layout() {
                 <Link to={"/about"}>
                     <img src={companyLogo} alt="easter egg" />
                 </Link>
-                <SearchBar />
 
                 <button>Корзина</button>
                 {
